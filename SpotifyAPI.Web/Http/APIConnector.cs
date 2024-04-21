@@ -200,15 +200,16 @@ namespace SpotifyAPI.Web.Http
       await ApplyAuthenticator(request).ConfigureAwait(false);
       _httpLogger?.OnRequest(request);
       IResponse response = await _httpClient.DoRequest(request, cancel).ConfigureAwait(false);
-      _httpLogger?.OnResponse(response);
+      _httpLogger?.OnResponse(request, response);
       ResponseReceived?.Invoke(this, response);
       if (_retryHandler != null)
       {
         response = await _retryHandler.HandleRetry(request, response, async (newRequest, ct) =>
         {
           await ApplyAuthenticator(request).ConfigureAwait(false);
+          _httpLogger?.OnRequest(newRequest);
           var newResponse = await _httpClient.DoRequest(request, ct).ConfigureAwait(false);
-          _httpLogger?.OnResponse(newResponse);
+          _httpLogger?.OnResponse(newRequest, newResponse);
           ResponseReceived?.Invoke(this, response);
           return newResponse;
         }, cancel).ConfigureAwait(false);
