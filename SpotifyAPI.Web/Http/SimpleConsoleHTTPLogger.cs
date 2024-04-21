@@ -22,7 +22,7 @@ namespace SpotifyAPI.Web.Http
       Console.WriteLine(OnRequestFormat, request.Method, request.Endpoint, parameters, request.Body);
     }
 
-    public void OnResponse(IResponse response)
+    public void OnResponse(IRequest request, IResponse response)
     {
       Ensure.ArgumentNotNull(response, nameof(response));
 #if NETSTANDARD2_1_OR_GREATER || NET5_0_OR_GREATER
