@@ -6,7 +6,7 @@ namespace SpotifyAPI.Web
     public bool? Collaborative { get; set; }
     public string? Description { get; set; } = default!;
     public Dictionary<string, string>? ExternalUrls { get; set; } = default!;
-    public Followers Followers { get; set; } = default!;
+    public Followers? Followers { get; set; } = default!;
     public string? Href { get; set; } = default!;
     public string? Id { get; set; } = default!;
     public List<Image>? Images { get; set; } = default!;
