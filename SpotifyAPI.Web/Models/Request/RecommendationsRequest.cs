@@ -21,7 +21,7 @@ namespace SpotifyAPI.Web
     /// </summary>
     /// <value></value>
     [QueryParam("seed_artists")]
-    public IList<string> SeedArtists { get; }
+    public IList<string> SeedArtists { get; set; }
 
     /// <summary>
     /// A comma separated list of any genres in the set of available genre seeds.
@@ -29,7 +29,7 @@ namespace SpotifyAPI.Web
     /// </summary>
     /// <value></value>
     [QueryParam("seed_genres")]
-    public IList<string> SeedGenres { get; }
+    public IList<string> SeedGenres { get; set; }
 
     /// <summary>
     /// A comma separated list of Spotify IDs for a seed track.
@@ -37,7 +37,7 @@ namespace SpotifyAPI.Web
     /// </summary>
     /// <value></value>
     [QueryParam("seed_tracks")]
-    public IList<string> SeedTracks { get; }
+    public IList<string> SeedTracks { get; set; }
 
     /// <summary>
     /// The target size of the list of recommended tracks.
