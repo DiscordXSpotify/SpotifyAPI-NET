@@ -3,7 +3,7 @@ using Newtonsoft.Json;
 
 namespace SpotifyAPI.Web
 {
-  public class FullArtist
+  public class FullArtist : IUriObject
   {
     public Dictionary<string, string> ExternalUrls { get; set; } = default!;
     public Followers Followers { get; set; } = default!;

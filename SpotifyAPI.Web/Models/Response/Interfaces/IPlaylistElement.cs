@@ -9,7 +9,7 @@ namespace SpotifyAPI.Web
     Episode
   }
 
-  public interface IPlayableItem
+  public interface IPlayableItem : IUriObject
   {
     [JsonConverter(typeof(StringEnumConverter))]
     ItemType Type { get; }

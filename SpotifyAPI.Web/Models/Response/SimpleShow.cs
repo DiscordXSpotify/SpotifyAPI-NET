@@ -2,7 +2,7 @@ using System.Collections.Generic;
 
 namespace SpotifyAPI.Web
 {
-  public class SimpleShow
+  public class SimpleShow : IUriObject
   {
     public List<string> AvailableMarkets { get; set; } = default!;
     public List<Copyright> Copyrights { get; set; } = default!;

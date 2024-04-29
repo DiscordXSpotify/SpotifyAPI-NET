@@ -2,7 +2,7 @@ using System.Collections.Generic;
 
 namespace SpotifyAPI.Web
 {
-  public class Context
+  public class Context : IUriObject
   {
     public Dictionary<string, string> ExternalUrls { get; set; } = default!;
     public string Href { get; set; } = default!;

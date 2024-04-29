@@ -2,7 +2,7 @@ using System.Collections.Generic;
 
 namespace SpotifyAPI.Web
 {
-  public class FullAlbum
+  public class FullAlbum : IUriObject
   {
     public string AlbumType { get; set; } = default!;
     public List<SimpleArtist> Artists { get; set; } = default!;

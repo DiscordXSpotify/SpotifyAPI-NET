@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 namespace SpotifyAPI.Web
 {
-  public class FullPlaylist
+  public class FullPlaylist : IUriObject
   {
     public bool? Collaborative { get; set; }
     public string? Description { get; set; } = default!;

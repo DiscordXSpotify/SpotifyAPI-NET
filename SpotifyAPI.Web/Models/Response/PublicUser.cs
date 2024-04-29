@@ -2,7 +2,7 @@ using System.Collections.Generic;
 
 namespace SpotifyAPI.Web
 {
-  public class PublicUser
+  public class PublicUser : IUriObject
   {
     public string DisplayName { get; set; } = default!;
     public Dictionary<string, string> ExternalUrls { get; set; } = default!;
