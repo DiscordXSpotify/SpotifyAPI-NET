@@ -20,6 +20,11 @@ namespace SpotifyAPI.Web
       }
     }
 
+    public APITooManyRequestsException(TimeSpan retryAfter)
+    {
+      RetryAfter = retryAfter;
+    }
+
     public APITooManyRequestsException() { }
 
     public APITooManyRequestsException(string message) : base(message) { }
